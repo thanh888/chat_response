@@ -1,0 +1,37 @@
+user_id	campground_id	content	rating	id	name	address	image	amenities	price	gps_location	regulations	policies	max_guests	id_user	status	id_category	discount	province	district	ward	created_at	province_name	district_name	ward_name
+11	9	Dịch vụ rất tốt, nhân viên nhiệt tình	5	9	Lake View 1	Biển hồ Pleiku	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733325263117lake1.jpg?alt=media&token=d38c9668-3bf4-460f-98c4-83961a6cdfdc	"Wifi
+Máy lạnh
+Nước uống"	33.00	14.035224, 107.999377	Giờ nhận và trả lều: nhận lều lúc 3:00PM và trả lều vào 11:00AM ngày hôm sau	Không có	3	5	approved	2	0	0	0	0	2024-12-8 10:16:23			
+11	13	Dịch vụ ổn, lều trại sạch sẽ 	4	13	Hồ Trị An	Dong Nai, Vietnam	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733388862121hta1.jpg?alt=media&token=da1e9a78-a240-4bb5-832a-31c95bfe1a51	"Lều Vintage, lều mông cổ, Bugalow
+Lều được trang bị nệm, quạt, túi ngủ
+Bàn ghế camping, Khu được thiết kế đèn chiếu sáng đầy đủ
+2 Khu nhà vệ sinh, nhà tắm sạch sẽ, ổ điện, wifi"	20.00	11.159025, 107.071585	Không có	"Thời gian nhận phòng: 14:00
+Thời gian trả phòng: 12:00"	30	9	approved	4	20	5	64	64	2024-12-12 10:16:23	 Tuyên Quang	Huyện Hàm Yên	Phường Văn Miếu
+11	12	Dịch vụ rất tệ, không an toàn, đồ dùng cũ kỹ	2	12	Khu du lịch sinh thái rừng Madagui Lâm Đồng	Km 152, Quốc lộ 20, Khu phố 1, Thị trấn Madaguôi, Huyện Đạ Huoai, Tỉnh Lâm Đồng, Việt Nam	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733385405439ld2.jpg?alt=media&token=c469df07-ed53-4544-9d08-9935d8312b99	"Tiện nghi Spa
+Hồ bơi ngoài trời
+Phòng gia đình"	30.00	11.419584, 107.578157	Phòng không hút thuốc	"Thời gian nhận trả phòng
+Thời gian nhận phòng: 14h00
+Thời gian trả phòng: 12h00"	4	8	approved	4	0	0	0	0	2024-12-11 10:16:23			
+10	9	Bất ngờ thật. Giá rẻ dịch vụ tốt k có gì bàn, nhân viên nhiệt tình	5	9	Lake View 1	Biển hồ Pleiku	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733325263117lake1.jpg?alt=media&token=d38c9668-3bf4-460f-98c4-83961a6cdfdc	"Wifi
+Máy lạnh
+Nước uống"	33.00	14.035224, 107.999377	Giờ nhận và trả lều: nhận lều lúc 3:00PM và trả lều vào 11:00AM ngày hôm sau	Không có	3	5	approved	2	0	0	0	0	2024-12-8 10:16:23			
+10	10	Phong cảnh tuyệt đẹp, 10 điểm không có nhưng	5	10	Khu cắm trại Coco Beachcamp Lagi – Bình Thuận	Lê Minh Công, La Gi, Việt Nam	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733384478096sea1.jpg?alt=media&token=6cb73eb5-c8f7-4767-852c-4e7f1dda14f6	"Đưa đón sân bay
+Quầy bar
+Máy lạnh
+Sân vườn"	20.00	10.643579, 107.743044	Phòng không hút thuốc	"Thời gian nhận trả phòng
+Thời gian nhận phòng: 14:00
+
+Thời gian trả phòng:  Trước 12:00"	2	8	approved	5	10	0	0	0	2024-12-9 10:16:23			
+7	11	Rất đẹp, năm sau tôi sẽ đến tiếp	5	11	Làng Du lịch Yên Trung	Yên Trung, Yên Định, Thanh Hoá	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733384764665th1.jpg?alt=media&token=b4160bb1-ab26-477c-b81e-ec1c26afc3ce	"Tiện nghi nấu nướng ngoài trời
+Nhà hàng
+Bãi đỗ xe ( miễn phí )"	100.00	20.026582, 105.565483	Không hút thuốc	"Thời gian nhận trả phòng
+Thời gian nhận phòng: 14:00
+Thời gian trả phòng: 12:00"	2	8	approved	6	0	0	0	0	2024-12-10 10:16:23			
+7	13	Non nước hữu tình, không có từ gì miêu tả được vẻ đẹp này. mọi người nên đến 1 lần	5	13	Hồ Trị An	Dong Nai, Vietnam	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733388862121hta1.jpg?alt=media&token=da1e9a78-a240-4bb5-832a-31c95bfe1a51	"Lều Vintage, lều mông cổ, Bugalow
+Lều được trang bị nệm, quạt, túi ngủ
+Bàn ghế camping, Khu được thiết kế đèn chiếu sáng đầy đủ
+2 Khu nhà vệ sinh, nhà tắm sạch sẽ, ổ điện, wifi"	20.00	11.159025, 107.071585	Không có	"Thời gian nhận phòng: 14:00
+Thời gian trả phòng: 12:00"	30	9	approved	4	20	5	64	64	2024-12-12 10:16:23	 Tuyên Quang	Huyện Hàm Yên	Phường Văn Miếu
+7	9	Dịch vụ đầy đủ, hoạt động vui chơi phong phú	4	9	Lake View 1	Biển hồ Pleiku	https://firebasestorage.googleapis.com/v0/b/zalo-app-66612.appspot.com/o/1733325263117lake1.jpg?alt=media&token=d38c9668-3bf4-460f-98c4-83961a6cdfdc	"Wifi
+Máy lạnh
+Nước uống"	33.00	14.035224, 107.999377	Giờ nhận và trả lều: nhận lều lúc 3:00PM và trả lều vào 11:00AM ngày hôm sau	Không có	3	5	approved	2	0	0	0	0	2024-12-8 10:16:23			
