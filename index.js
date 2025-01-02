@@ -65,7 +65,9 @@ webApp.get("/", (req, res) => {
 webApp.post("/dialogflow", async (req, res) => {
   let action = req.body.queryResult.action;
   let queryText = req.body.queryResult.queryText;
-  let context = "Dữ liệu liên quan đến khu cắm trại"; // Dữ liệu tĩnh hoặc từ nguồn bạn cung cấp
+
+  const context = await readDataFromFile("output.txt");
+  // let context = "Dữ liệu liên quan đến khu cắm trại"; // Dữ liệu tĩnh hoặc từ nguồn bạn cung cấp
 
   if (action === "input.unknown") {
     let result = await askGroq(queryText, context);
