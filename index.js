@@ -49,7 +49,7 @@ const askGroq = async (question, context) => {
 };
 
 const webApp = express();
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5005;
 
 webApp.use(express.urlencoded({ extended: true }));
 webApp.use(express.json());
