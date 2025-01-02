@@ -1,6 +1,8 @@
 const express = require("express");
 const { Groq } = require("groq-sdk"); // Đảm bảo bạn đã cài đặt groq-sdk
 require("dotenv").config();
+const path = require("path");
+const fs = require("fs-extra");
 
 const groq = new Groq({
   apiKey: process.env.GROQ_API_KEY, // Lấy API Key từ biến môi trường
@@ -61,6 +63,11 @@ webApp.use((req, res, next) => {
 webApp.get("/", (req, res) => {
   res.sendStatus(200);
 });
+
+const readDataFromFile = async (filename) => {
+  const filePath = path.join(__dirname, "public", filename);
+  return await fs.readFile(filePath, "utf-8");
+};
 
 webApp.post("/dialogflow", async (req, res) => {
   let action = req.body.queryResult.action;
