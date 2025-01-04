@@ -1,45 +1,35 @@
 const express = require("express");
-const { Groq } = require("groq-sdk"); // Đảm bảo bạn đã cài đặt groq-sdk
+const { GoogleGenerativeAI } = require("@google/generative-ai");
 require("dotenv").config();
 const path = require("path");
 const fs = require("fs-extra");
 
-const groq = new Groq({
-  apiKey: process.env.GROQ_API_KEY, // Lấy API Key từ biến môi trường
-  baseURL: "https://api.groq.com", // Đặt baseURL cho Groq
-});
+// Khởi tạo Google Generative AI
+const genAI = new GoogleGenerativeAI(process.env.GOOGLE_API_KEY); // Lấy API Key từ biến môi trường
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
-const askGroq = async (question, context) => {
+const askGoogleAI = async (question, context) => {
   try {
-    const response = await groq.chat.completions.create({
-      messages: [
-        {
-          role: "system",
-          content: `
-            Bạn là trợ lý AI có tên là EverTrip_Bot. 
-            Bạn là trợ lý hỗ trợ chăm sóc khách hàng về vấn đề đặt lịch cắm trại. 
-            Tông giọng của bạn như một chuyên viên kinh doanh chuyên nghiệp nhưng vẫn thân thiện, tận tâm và tư vấn được mọi thông tin khách hàng cần biết.
-            Trả lời ngắn gọn khoảng 3 đến 4 câu. 
-            Chỉ dựa trên dữ liệu tôi cung cấp và không suy diễn ngoài ngữ cảnh. 
-            Trả lời tất cả câu hỏi bằng tiếng Việt.
-            Nếu không đủ dữ liệu để trả lời, hãy nói rằng quý khách hãy liên hệ 1800 1199 để được tư vấn chính xác nhất.
-          `,
-        },
-        {
-          role: "user",
-          content: `Context: ${context}\nQuestion: ${question}`,
-        },
-      ],
-      model: "mixtral-8x7b-32768", // Model Groq
-    });
+    const prompt = `
+      Bạn là trợ lý AI có tên là EverTrip_Bot.
+      Bạn là trợ lý hỗ trợ chăm sóc khách hàng về vấn đề đặt lịch cắm trại.
+      Tông giọng của bạn như một chuyên viên kinh doanh chuyên nghiệp nhưng vẫn thân thiện, tận tâm và tư vấn được mọi thông tin khách hàng cần biết.
+      Trả lời ngắn gọn khoảng 3 đến 4 câu.
+      Chỉ dựa trên dữ liệu tôi cung cấp và không suy diễn ngoài ngữ cảnh.
+      Trả lời tất cả câu hỏi bằng tiếng Việt.
+      Nếu không đủ dữ liệu để trả lời, hãy nói rằng quý khách hãy liên hệ 1800 1199 để được tư vấn chính xác nhất.
+      Context: ${context}
+      Question: ${question}
+    `;
 
+    const result = await model.generateContent(prompt);
     return {
       status: 1,
-      response: response.choices[0].message.content,
+      response: result.response.text(),
     };
   } catch (error) {
     console.error(
-      "Error from Groq:",
+      "Error from Google Generative AI:",
       error.response ? error.response.data : error.message
     );
     return {
@@ -74,11 +64,10 @@ webApp.post("/dialogflow", async (req, res) => {
   let queryText = req.body.queryResult.queryText;
 
   const context = await readDataFromFile("output.txt");
-  // let context = "Dữ liệu liên quan đến khu cắm trại"; // Dữ liệu tĩnh hoặc từ nguồn bạn cung cấp
 
   if (action === "input.unknown") {
-    let result = await askGroq(queryText, context);
-    if (result.status == 1) {
+    let result = await askGoogleAI(queryText, context);
+    if (result.status === 1) {
       res.send({
         fulfillmentText: result.response,
       });
